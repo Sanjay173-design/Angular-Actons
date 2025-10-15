@@ -9,13 +9,17 @@ jobs:
   runs-on: ubuntu-latest
 
   steps:
-   - uses: actions/checkout@v5.0.0
-   - name: setup node
-   - uses: actions/setup-node@v6.0.0
+   - name: checkout 
+     uses: actions/checkout@v5.0.0
+     
+   - name: setup Node js
+     uses: actions/setup-node@v6.0.0
      with:
       node-version: 22.x
+      
    - name: install dependenceis
      run: npm install 
+     
    - name: build app
      run: npm run bulid
        
